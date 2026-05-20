@@ -3,8 +3,8 @@ public class NodePembeli {
     Pembeli data;
     NodePembeli prev, next; // double linked list
 
+    // constructor
     public NodePembeli(NodePembeli prev, int nomor, Pembeli data, NodePembeli next) {
-
         this.prev = prev;
         this.nomor = nomor;
         this.data = data;

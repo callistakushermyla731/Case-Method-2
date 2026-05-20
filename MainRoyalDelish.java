@@ -4,8 +4,8 @@ public class MainRoyalDelish {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        AntrianDLL antrian = new AntrianDLL();
-        PesananDLL pesanan = new PesananDLL();
+        AntrianDLL antrian = new AntrianDLL(); //oject antrian
+        PesananDLL pesanan = new PesananDLL(); //object pesanan
 
         int pilih;
         do{
@@ -27,7 +27,7 @@ public class MainRoyalDelish {
                     String nama = sc.nextLine();
                     System.out.print("No HP : ");
                     String hp = sc.nextLine();
-                    Pembeli p = new Pembeli(nama, hp);
+                    Pembeli p = new Pembeli(nama, hp); //object pembeli
                     antrian.tambahAntrian(p);
                     break;
                 case 2:
@@ -41,7 +41,7 @@ public class MainRoyalDelish {
                     String np = sc.nextLine();
                     System.out.print("Harga : ");
                     int harga = sc.nextInt();
-                    Pesanan ps = new Pesanan(kode, np, harga);
+                    Pesanan ps = new Pesanan(kode, np, harga); //object pesanan
                     antrian.layani(pesanan,ps);
                     break;
                 case 4:

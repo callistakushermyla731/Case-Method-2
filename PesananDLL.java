@@ -10,7 +10,7 @@ public class PesananDLL {
 
     public void tambahPesanan(Pesanan p) {
 
-        NodePesanan baru = new NodePesanan(tail, p, null);
+        NodePesanan baru = new NodePesanan(tail, p, null); //object node pesanan
 
         if(isEmpty()){
             head = tail =  baru;

@@ -3,6 +3,7 @@ public class Pesanan {
     String namaPesanan;
     int harga;
 
+    // constructor
     public Pesanan(int kodePesanan, String namaPesanan, int harga) {
         this.kodePesanan = kodePesanan;
         this.namaPesanan = namaPesanan;

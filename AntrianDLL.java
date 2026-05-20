@@ -12,7 +12,7 @@ public class AntrianDLL {
 
     // tambah pembeli ke antrian
     public void tambahAntrian(Pembeli p) {
-        NodePembeli baru = new NodePembeli(tail, nomor, p, null);
+        NodePembeli baru = new NodePembeli(tail, nomor, p, null); //object node pembeli
         nomor++;
         if(isEmpty()) {
             head = tail = baru;
