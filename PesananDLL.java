@@ -12,7 +12,7 @@ public class PesananDLL {
 
         NodePesanan baru = new NodePesanan(tail, p, null); //object node pesanan
 
-        if(isEmpty()){
+        if(isEmpty()) {
             head = tail =  baru;
         }else{
             // operasi double linked list

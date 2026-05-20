@@ -16,7 +16,8 @@ public class MainRoyalDelish {
             System.out.println("2. Cetak Antrian");
             System.out.println("3. Hapus Antrian + Pesan");
             System.out.println("4. Laporan Pesanan");
-            System.out.println("5. Keluar");
+            System.out.println("5. Batalkan Antrian");
+            System.out.println("6. Keluar");
             System.out.print("Pilih : ");
             pilih = sc.nextInt();
             sc.nextLine();
@@ -48,11 +49,16 @@ public class MainRoyalDelish {
                     pesanan.tampilPesanan();
                     break;
                 case 5:
-                    System.out.println("Program selesai");
+                        System.out.print("Masukkan nomor antrian: ");
+                        int no = sc.nextInt();
+                        antrian.batalkanAntrian(no);
+                        antrian.cetakAntrian();
                     break;
+                case 6 :
+                    System.out.println("Program Selesai.");
                 default:
-                    System.out.println("Menu salah");
+                    System.out.println("Pilih menu sesuai pilihan yang tersedia.");
             }
-        } while (pilih != 5);
+        } while (pilih != 6);
     }
 }

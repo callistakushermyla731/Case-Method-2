@@ -62,4 +62,37 @@ public class AntrianDLL {
         }
         size--;
     }
+
+    //batalkan antrian
+    public void batalkanAntrian(int noAntrian){
+        if(isEmpty()){
+            System.out.println("Antrian kosong, tidak ada antrian yang bisa dibatalkan");
+            return;
+        }
+
+        NodePembeli tmp = head;
+        while(tmp != null){
+            if(tmp.nomor == noAntrian){
+                if(tmp == head){
+                    head = head.next;
+                    if(head != null){
+                        head.prev = null;
+                    }
+                } else if(tmp == tail){
+                    tail = tail.prev;
+                    if(tail != null){
+                        tail.next = null;
+                    }
+                } else{
+                    tmp.prev.next = tmp.next;
+                    tmp.next.prev = tmp.prev;
+                }
+                size--;
+                System.out.println("Antrian nomor " + noAntrian + " dibatalkan");
+                return;
+            }
+            tmp = tmp.next;
+        }
+        System.out.println("Nomor antrian tidak ditemukan");
+    }
 }
